@@ -7,18 +7,37 @@
   <a mat-list-item routerLink="/home" routerLinkActive="list-item-active"
     ><mat-icon>home</mat-icon>Home</a
   >
-  <a mat-list-item routerLink="/course" routerLinkActive="list-item-active"
-    ><mat-icon>book</mat-icon>Course</a
+  <a
+    mat-list-item
+    routerLink="/course"
+    routerLinkActive="list-item-active"
+    *ngIf="loginService.roleMatch(['USER'])"
   >
-  <a mat-list-item routerLink="/student" routerLinkActive="list-item-active"
+    <mat-icon>book</mat-icon>
+    Course
+  </a>
+  <a
+    mat-list-item
+    routerLink="/student"
+    routerLinkActive="list-item-active"
+    *ngIf="loginService.roleMatch(['ADMIN'])"
     ><mat-icon>people</mat-icon>Student</a
   >
 
   <a
+    *ngIf="!isLoggedIn()"
     class="login"
     mat-list-item
     routerLink="/login"
     routerLinkActive="list-item-active"
     ><mat-icon>login</mat-icon>Login</a
+  >
+  <a
+    *ngIf="isLoggedIn()"
+    class="logout"
+    mat-list-item
+    routerLinkActive="list-item-active"
+    (click)="logout()"
+    ><mat-icon>logout</mat-icon>Logout</a
   >
 </mat-nav-list>
