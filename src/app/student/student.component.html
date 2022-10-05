@@ -1,7 +1,7 @@
 <div class="container-fluid page">
   <div class="d-flex page__box p-3 mt-2">Student</div>
   <div class="page__content shadow p-3 position-relative">
-    <table class="table table-dark table-striped">
+    <!-- <table class="table table-dark table-striped">
       <thead>
         <tr>
           <th scope="col">Student Name</th>
@@ -18,6 +18,9 @@
           <td><button type="button" class="btn btn-danger">Delete</button></td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+    <div *ngFor="let users of user">
+      <div>{{ users.username }}</div>
+    </div>
   </div>
 </div>
