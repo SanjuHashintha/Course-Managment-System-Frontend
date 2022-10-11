@@ -1,0 +1,61 @@
+<form #addForm="ngForm" (ngSubmit)="onAddStudent(addForm)">
+  <div class="form-group">
+    <label>Username</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      ngModel
+      name="username"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>First Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstName"
+      ngModel
+      name="firstName"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Last Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="lastName"
+      ngModel
+      name="lastName"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      aria-describedby="emailHelp"
+      ngModel
+      name="email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="passoword">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      ngModel
+      name="password"
+    />
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary" (click)="onCLoseClick()">
+      Save Student
+    </button>
+  </div>
+</form>

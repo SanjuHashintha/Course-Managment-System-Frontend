@@ -1,0 +1,46 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Student</div>
+  <div class="page__content shadow p-3 position-relative" id="main-container">
+    <button mat-raised-button color="primary" (click)="onOpenDialog()">
+      Add
+    </button>
+    <table class="table table-secondary table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Username</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let users of user">
+          <td>{{ users.username }}</td>
+          <td>{{ users.firstName }}</td>
+          <td>{{ users.lastName }}</td>
+          <td>{{ users.email }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="updateUser(users.id)"
+            >
+              Edit
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="onDeleteStudent(users.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
