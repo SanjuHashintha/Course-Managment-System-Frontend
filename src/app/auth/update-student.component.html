@@ -1,0 +1,49 @@
+<form #editForm="ngForm">
+  <div class="form-group">
+    <label>Username</label>
+    <input
+      type="text"
+      ngModel="{{ editUser.username }} "
+      class="form-control"
+      id="username"
+      name="username"
+    />
+  </div>
+  <input
+    type="hidden"
+    ngModel="{{ editUser.id }} "
+    class="form-control"
+    id="id"
+    name="id"
+  />
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      ngModel="{{ editUser.email }} "
+      class="form-control"
+      id="email"
+      aria-describedby="emailHelp"
+      name="email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      ngModel="{{ editUser.password }} "
+      class="form-control"
+      id="password"
+      name="password"
+    />
+  </div>
+  <div class="modal-footer">
+    <button
+      type="submit"
+      class="btn btn-primary"
+      (click)="onUpdateStudent(editForm.value)"
+    >
+      Update Student
+    </button>
+  </div>
+</form>

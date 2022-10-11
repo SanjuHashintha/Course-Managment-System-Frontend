@@ -1,0 +1,45 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Course</div>
+  <div class="page__content shadow p-3 position-relative" id="main-container">
+    <button mat-raised-button color="primary" (click)="onOpenDialog()">
+      Add
+    </button>
+    <table class="table table-secondary table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Course Code</th>
+          <th scope="col">Course Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let courses of course">
+          <td>{{ courses.courseCode }}</td>
+          <td>{{ courses.courseName }}</td>
+          <td>{{ courses.description }}</td>
+
+          <td>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="updateCourse(courses.id)"
+            >
+              Edit
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="onDeleteCourse(courses.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

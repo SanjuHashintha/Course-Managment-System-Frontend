@@ -1,0 +1,13 @@
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(180deg, #b77f7f, #cc6b6b);
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
