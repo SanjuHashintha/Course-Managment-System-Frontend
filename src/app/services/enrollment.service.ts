@@ -27,4 +27,10 @@ export class EnrollmentService {
   public getEnrollmentById(id: string): Observable<Enrollment[]> {
     return this.http.get<Enrollment[]>(`${this.API_PATH}/enrollment/${id}`);
   }
+
+  public getEnrollmentByUsername(username: string): Observable<Enrollment[]> {
+    return this.http.get<Enrollment[]>(
+      `${this.API_PATH}/enrollment/user/${username}`
+    );
+  }
 }
