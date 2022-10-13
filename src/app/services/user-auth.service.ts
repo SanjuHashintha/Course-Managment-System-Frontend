@@ -22,6 +22,14 @@ export class UserAuthService {
     return localStorage.getItem('token');
   }
 
+  public setUsername(username: string) {
+    localStorage.setItem('username', username);
+  }
+
+  public getUsername() {
+    return localStorage.getItem('username');
+  }
+
   public clear() {
     localStorage.clear();
   }

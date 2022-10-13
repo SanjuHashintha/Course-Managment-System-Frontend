@@ -38,6 +38,8 @@ import { UserStudentComponent } from './user/user-student/user-student.component
 import { UserCourseComponent } from './user/user-course/user-course.component';
 import { AddCourseComponent } from './dialogBox/add-course/add-course.component';
 import { UpdateCourseComponent } from './dialogBox/update-course/update-course.component';
+import { EnrolledStudentComponent } from './admin/enrolled-student/enrolled-student.component';
+import { EnrolledCourseComponent } from './user/enrolled-course/enrolled-course.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { UpdateCourseComponent } from './dialogBox/update-course/update-course.c
     UserCourseComponent,
     AddCourseComponent,
     UpdateCourseComponent,
+    EnrolledStudentComponent,
+    EnrolledCourseComponent,
   ],
   imports: [
     BrowserModule,
