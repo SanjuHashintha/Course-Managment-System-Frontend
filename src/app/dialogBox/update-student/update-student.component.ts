@@ -47,4 +47,8 @@ export class UpdateStudentComponent implements OnInit {
     alert('Updated');
     this.router.navigate(['/users']);
   }
+
+  onBackClick() {
+    this.router.navigate(['dashboard/student']);
+  }
 }

@@ -17,6 +17,15 @@
   </a>
 
   <a
+    mat-list-item
+    routerLink="./enrolledcourse"
+    routerLinkActive="list-item-active"
+  >
+    <mat-icon>work</mat-icon>
+    Enrolled Course
+  </a>
+
+  <a
     *ngIf="!isLoggedIn()"
     class="login"
     mat-list-item

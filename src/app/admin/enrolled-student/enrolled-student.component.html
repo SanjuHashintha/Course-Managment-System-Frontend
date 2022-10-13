@@ -1,0 +1,19 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Enrolled Student</div>
+  <div class="page__content shadow p-3 position-relative" id="main-container">
+    <table class="table table-secondary table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Course Code</th>
+          <th scope="col">User Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enrollment of enrollments">
+          <td>{{ enrollment.courseCode }}</td>
+          <td>{{ enrollment.username }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
