@@ -7,20 +7,20 @@
     <table class="table table-secondary table-striped">
       <thead>
         <tr>
-          <th scope="col">Course Code</th>
-          <th scope="col">Course Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Edit</th>
-          <th scope="col">Delete</th>
+          <th class="text-center" scope="col">Course Code</th>
+          <th class="text-center" scope="col">Course Name</th>
+          <th class="text-center" scope="col">Description</th>
+          <th class="text-center" scope="col">Edit</th>
+          <th class="text-center" scope="col">Delete</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let courses of course">
-          <td>{{ courses.courseCode }}</td>
-          <td>{{ courses.courseName }}</td>
-          <td>{{ courses.description }}</td>
+          <td class="text-center">{{ courses.courseCode }}</td>
+          <td class="text-center">{{ courses.courseName }}</td>
+          <td class="text-center">{{ courses.description }}</td>
 
-          <td>
+          <td class="text-center">
             <button
               type="button"
               class="btn btn-primary"
@@ -29,7 +29,7 @@
               Edit
             </button>
           </td>
-          <td>
+          <td class="text-center">
             <button
               type="button"
               class="btn btn-danger"

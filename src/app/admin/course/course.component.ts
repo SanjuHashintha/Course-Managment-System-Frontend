@@ -36,17 +36,19 @@ export class CourseComponent implements OnInit {
   }
 
   public onDeleteCourse(userId: string): void {
-    this.courseService.deleteCourse(userId).subscribe(
-      (response: void) => {
-        console.log(response);
-        this.courseService.getCourse();
-        window.location.reload();
-      },
-      (HttpErrorResponse) => {
-        alert('Course Deleted');
-        window.location.reload();
-      }
-    );
+    if (confirm('Are you sure want to delete course?')) {
+      this.courseService.deleteCourse(userId).subscribe(
+        (response: void) => {
+          console.log(response);
+          this.courseService.getCourse();
+          window.location.reload();
+        },
+        (HttpErrorResponse) => {
+          alert('Course Deleted');
+          window.location.reload();
+        }
+      );
+    }
   }
 
   onOpenDialog() {

@@ -36,17 +36,19 @@ export class StudentComponent implements OnInit {
   }
 
   public onDeleteStudent(userId: string): void {
-    this.userService.deleteUsers(userId).subscribe(
-      (response: void) => {
-        console.log(response);
-        this.userService.getUsers();
-        window.location.reload();
-      },
-      (HttpErrorResponse) => {
-        alert('User Deleted');
-        window.location.reload();
-      }
-    );
+    if (confirm('Are you sure want to delete student?')) {
+      this.userService.deleteUsers(userId).subscribe(
+        (response: void) => {
+          console.log(response);
+          this.userService.getUsers();
+          window.location.reload();
+        },
+        (HttpErrorResponse) => {
+          alert('User Deleted');
+          window.location.reload();
+        }
+      );
+    }
   }
 
   onOpenDialog() {

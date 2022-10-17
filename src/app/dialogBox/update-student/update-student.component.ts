@@ -42,10 +42,9 @@ export class UpdateStudentComponent implements OnInit {
   onSubmit() {
     this.userService.updateUsers(this.id, this.user).subscribe((response) => {
       console.log(response);
+      alert('Updated');
+      this.router.navigate(['dashboard/student']);
     });
-
-    alert('Updated');
-    this.router.navigate(['/users']);
   }
 
   onBackClick() {

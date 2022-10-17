@@ -40,6 +40,7 @@ import { AddCourseComponent } from './dialogBox/add-course/add-course.component'
 import { UpdateCourseComponent } from './dialogBox/update-course/update-course.component';
 import { EnrolledStudentComponent } from './admin/enrolled-student/enrolled-student.component';
 import { EnrolledCourseComponent } from './user/enrolled-course/enrolled-course.component';
+import { DeleteCourseComponent } from './dialogBox/delete-course/delete-course.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { EnrolledCourseComponent } from './user/enrolled-course/enrolled-course.
     UpdateCourseComponent,
     EnrolledStudentComponent,
     EnrolledCourseComponent,
+    DeleteCourseComponent,
   ],
   imports: [
     BrowserModule,
