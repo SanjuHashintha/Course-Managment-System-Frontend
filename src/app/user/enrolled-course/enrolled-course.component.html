@@ -1,17 +1,17 @@
 <div class="container-fluid page">
-  <div class="d-flex page__box p-3 mt-2">Enrolled Course</div>
+  <div class="d-flex page__box p-3 mt-2">Enrollement</div>
   <div class="page__content shadow p-3 position-relative" id="main-container">
     <table class="table table-dark table-striped">
       <thead>
         <tr>
-          <th scope="col">Course Code</th>
-          <th scope="col">User Name</th>
+          <th class="text-center" scope="col">Course Code</th>
+          <th class="text-center" scope="col">User Name</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let enrollment of enrollments">
-          <td>{{ enrollment.courseCode }}</td>
-          <td>{{ enrollment.username }}</td>
+          <td class="text-center">{{ enrollment.courseCode }}</td>
+          <td class="text-center">{{ enrollment.username }}</td>
         </tr>
       </tbody>
     </table>

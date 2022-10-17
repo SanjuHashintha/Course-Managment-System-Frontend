@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Enrollment } from 'src/app/models/enrollment';
+import { User } from 'src/app/models/user';
 import { EnrollmentService } from 'src/app/services/enrollment.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { EnrollmentService } from 'src/app/services/enrollment.service';
 })
 export class EnrolledStudentComponent implements OnInit {
   public enrollments: Enrollment[];
+  public user: User[];
 
   constructor(private enrollmentService: EnrollmentService) {}
 
